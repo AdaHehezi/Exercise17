@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings-Class & Functional component</title>
+</head>
+<body>
+
+    <!--1 //create root div with an id  -->
+    <div id="root"> This will change</div>
+    <!-- 2 get react libs -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- 3. Include Babel -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 4. Babel script -->
+<script type="text/babel"> 
+
+// Creat a class component
+class GreetingsClass extends React.Component{
+    render(){
+        return <h1> Hello from Class Component</h1>
+    }
+}
+
+// Creat a functional component
+function GreetingsFunctional() {
+        return <h1>Hello from Functional Component</h1>;
+        }
+
+
+// 5. create root from div
+let rootnode = ReactDOM.createRoot(document.getElementById('root'));
+rootnode.render([<GreetingsClass/>,<GreetingsFunctional/>]);
+
+
+</script>
+</body>
+</html>
